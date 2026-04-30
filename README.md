@@ -401,7 +401,9 @@ The hardware setup is continuously revised during testing and debugging stages.
 
 # 16. Build Photos
 
-Not applicable currently. Build photos will be added after hardware assembly.
+## Hardware Setup
+
+![Hardware Setup](images/hardware_setup.jpeg).
 
 ---
 
