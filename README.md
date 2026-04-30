@@ -240,17 +240,11 @@ Not applicable currently. Flowchart will be added later.
 ---
 
 # 9. Bill of Materials
+Not Applicable
 
 ## 9.1 Full BOM
+Not Applicable
 
-| Item | Quantity | In Kit? | Need to Buy? | Estimated Cost |
-|---|---|---|---|---|
-| FPGA Board | 1 | Yes | No | 0 |
-| HC-05 Module | 1 | No | Yes | 300 |
-| MQ Gas Sensor | 1 | No | Yes | 150 |
-| DHT11 Sensor | 1 | No | Yes | 120 |
-| Touch Sensor | 1 | No | Yes | 80 |
-| LEDs | Multiple | Yes | No | 0 |
 
 ---
 
@@ -268,25 +262,18 @@ HC-05 Bluetooth module was selected for simple UART-based wireless communication
 |---|---|---|
 | MQ Sensor | Hazard detection | Received |
 | DHT11 Sensor | Temperature monitoring | Received |
-| HC-05 | Wireless communication | Pending |
+| HC-05 | Wireless communication | Received |
 
 ---
 
 ## 9.4 Budget Summary
 
-| Budget Item | Estimated Cost |
-|---|---|
-| Electronics | 800 |
-| Sensors | 400 |
-| Communication Module | 300 |
-| Miscellaneous | 200 |
-| Total | 1700 |
-
+Not Applicable
 ---
 
 ## 9.5 Budget Reflection
 
-If the budget becomes high, Bluetooth communication and additional displays can be simplified or shared.
+Not Applicable
 
 ---
 
@@ -304,10 +291,10 @@ Progress is checked regularly through team discussions and hardware testing sess
 
 | Task ID | Task | Owner | Status |
 |---|---|---|---|
-| T1 | System Architecture | Team | Completed |
-| T2 | UART Design | FPGA Team | Completed |
-| T3 | DHT11 Interfacing | FPGA Team | In Progress |
-| T4 | Bluetooth Integration | Team | Pending |
+| T1 | System Architecture |  | Completed |
+| T2 | UART Design |  | Completed |
+| T3 | DHT11 Interfacing | | In Progress |
+| T4 | Bluetooth Integration |  | Pending |
 
 ---
 
@@ -315,10 +302,10 @@ Progress is checked regularly through team discussions and hardware testing sess
 
 | Area | Main Owner | Support Owner |
 |---|---|---|
-| FPGA RTL Design | Sweety | Team Member |
-| Electronics | Team Member | Sweety |
-| Documentation | Sweety | Team |
-| Testing | Team | Team |
+| FPGA RTL Design |  |  |
+| Electronics |  |  |
+| Documentation |  |  |
+| Testing |  |  |
 
 ---
 
@@ -353,12 +340,7 @@ Progress is checked regularly through team discussions and hardware testing sess
 
 ## 11.2 Update Log
 
-| Days | Planned Goal | What Actually Happened | Next Steps |
-|---|---|---|---|
-| Day 1 | Finalize project | Completed architecture planning | Start Verilog coding |
-| Day 2 | UART design | UART module completed | Sensor integration |
-| Day 3 | Sensor interfacing | DHT11 FSM in progress | Hardware testing |
-
+Not Applicable
 ---
 
 # 13. Risks and Unknowns
@@ -394,8 +376,8 @@ The biggest uncertainty is stable real-time sensor interfacing and wireless comm
 
 | Date | Problem Found | Result |
 |---|---|---|
-| Week 1 | UART baud mismatch | Fixed |
-| Week 2 | Sensor timing issue | Debugging in progress |
+| 30 April | UART baud mismatch | Fixed |
+| 2 April | Sensor timing issue | Debugging in progress |
 
 ---
 
