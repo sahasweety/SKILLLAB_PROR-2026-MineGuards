@@ -10,10 +10,10 @@ MineGuards
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| Sweety Saha | FPGA RTL Design / Coding | Documentation | Verilog Design, Problem Solving |
-| Team Member 2 | Electronics / Hardware | Testing | Sensor Integration |
-| Team Member 3 | Communication Module | Documentation | UART & Bluetooth Integration |
-
+| Pranay Wani | FPGA RTL Design / Coding | Documentation | Verilog Design, Problem Solving |
+| Ashutosh Tiwari | Electronics / Hardware | Testing | Sensor Integration |
+| Vedant Naik | Communication Module | Connection | UART & Bluetooth Integration |
+| Sweety Sahya | Communication Module | Documentation | UART & Bluetooth Integration |
 ---
 
 ## 1.3 Project Title
