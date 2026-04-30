@@ -226,34 +226,6 @@ TEMP:30 HUM:70 GAS:1 SOS:0
 
 ---
 
-# 📅 Weekly Progress Log
-
-| Week | Work Completed | Status |
-|---|---|---|
-| Week 1 | Project idea finalization and architecture planning | ✅ Completed |
-| Week 2 | Sensor selection and hardware study | ✅ Completed |
-| Week 3 | UART transmitter design in Verilog | ✅ Completed |
-| Week 4 | DHT11 FSM implementation | 🔄 In Progress |
-| Week 5 | FPGA integration and testing | ⏳ Pending |
-| Week 6 | Bluetooth communication testing | ⏳ Pending |
-| Week 7 | Final hardware testing and debugging | ⏳ Pending |
-| Week 8 | Documentation and presentation | ⏳ Pending |
-
----
-
-# 📌 Task Status
-
-| Task | Status |
-|---|---|
-| System Design | ✅ Completed |
-| Verilog RTL Coding | 🔄 In Progress |
-| Sensor Interfacing | 🔄 In Progress |
-| UART Communication | ✅ Completed |
-| Bluetooth Integration | ⏳ Pending |
-| Hardware Testing | ⏳ Pending |
-| Documentation | 🔄 In Progress |
-
----
 
 # 📷 Images / Screenshots
 
@@ -280,11 +252,6 @@ Not applicable currently. Demo video will be uploaded after project completion.
 
 ---
 
-# 🧠 Viva Key Point
-
-> “The system is implemented entirely in Verilog without a processor, using FSM-based sensor interfacing and UART communication to achieve a real-time embedded monitoring system on FPGA.”
-
----
 
 # 📜 License
 
