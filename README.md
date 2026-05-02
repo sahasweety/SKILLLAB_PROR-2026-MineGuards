@@ -25,7 +25,7 @@
 | Pranay Wani | FPGA RTL Design & Coding | FPGA Integration | Verilog HDL, FPGA Design, Debugging |
 | Ashutosh Tiwari |  Hardware Integration | Testing | Sensor Integration, Hardware Assembly |
 | Vedant Naik | Testing | FPGA Integration | UART & Bluetooth Communication |
-| Sweety Saha | Documentation & Software Support | Testing | Technical Documentation |
+| Sweety Saha | Documentation & Software Support | UI  | Technical Documentation |
 
 ---
 
@@ -179,18 +179,11 @@ The system functions as a real-time industrial safety monitoring device for unde
 
 ## 6.2 Labeled Build Sketch/architecture/flow diagram/algorithm
 
-The following diagrams represent the hardware architecture and operational flow of the FPGA-based smart safety helmet monitoring system.
-
-### Hardware Architecture
-
-<p align="center">
-  <img src="./images/block%20design%20for%20boolean%20board.jpeg" width="750">
-</p>
-
+The following diagrams represent the operational flow of the FPGA-based smart safety helmet monitoring system.
 ### System Flowchart
 
 <p align="center">
-  <img src="./images/flow%20daigram.png" width="750">
+  <img src="./images/flowdiagram.png" width="750">
 </p>
 
 ### Description
@@ -244,10 +237,11 @@ All components share a common ground and are powered directly from the FPGA boar
 
 ## 7.3 Circuit Diagram/architecture diagram
 
-**Response:**  
-`Not applicable currently. The complete circuit diagram and Vivado hardware architecture will be uploaded after final verification and testing.`
+The following block design represents the MicroBlaze-based FPGA architecture implemented in Vivado for sensor interfacing, UART communication, GPIO control, LED indication, and 7-segment display operation.
 
----
+<p align="center">
+  <img src="./images/block%20design%20for%20boolean%20board.jpeg" width="750">
+</p>
 
 ## 7.4 Power Plan
 
@@ -306,11 +300,7 @@ The system resets all outputs and returns to monitoring mode during restart cond
 
 ## 8.3 Code Flowchart
 
-The following block design represents the MicroBlaze-based FPGA architecture implemented in Vivado for sensor interfacing, UART communication, GPIO control, LED indication, and 7-segment display operation.
 
-<p align="center">
-  <img src="./images/block%20design%20for%20boolean%20board.jpeg" width="750">
-</p>
 
 ### Block Design Description
 
@@ -504,17 +494,6 @@ The following image shows the complete hardware implementation of the FPGA-based
   <img src="./images/hardware%20setup.jpeg" width="650">
 </p>
 
-### Hardware Demonstration
-
-- Boolean FPGA Board used as the main processing unit
-- MQ2 gas sensor connected for hazardous gas detection
-- DHT11 sensor interfaced for temperature and humidity monitoring
-- HC-05 Bluetooth module connected for UART wireless communication
-- LEDs and 7-segment displays used for visual indication and monitoring
-
-The hardware setup demonstrates successful integration of FPGA hardware, sensors, communication modules, and display peripherals for real-time industrial safety monitoring applications.
-
----
 ### Hardware Demonstration
 
 - Boolean FPGA Board used as the main processing unit
