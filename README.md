@@ -290,22 +290,21 @@ The system resets all outputs and returns to monitoring mode during restart cond
 The following block design represents the MicroBlaze-based FPGA architecture implemented in Vivado for sensor interfacing, UART communication, GPIO control, LED indication, and 7-segment display operation.
 
 <p align="center">
-  <img src="images/block_design_boolean_board.jpeg" width="750"/>
+  <img src="./images/block%20design%20for%20boolean%20board.jpeg" width="750">
 </p>
 
 ### Block Design Description
 
-- MicroBlaze soft-core processor is used for embedded processing.
-- AXI GPIO modules interface LEDs, PMOD pins, and 7-segment displays.
-- AXI UARTLite modules handle Bluetooth UART communication.
-- Clocking Wizard generates the required FPGA clock.
-- Processor System Reset manages synchronized reset signals.
-- AXI SmartConnect enables communication between peripherals and MicroBlaze.
+- MicroBlaze soft-core processor is used for embedded processing
+- AXI GPIO modules interface LEDs, PMOD pins, and 7-segment displays
+- AXI UARTLite modules handle Bluetooth UART communication
+- Clocking Wizard generates the required FPGA clock
+- Processor System Reset manages synchronized reset signals
+- AXI SmartConnect enables communication between peripherals and MicroBlaze
 
 The architecture enables real-time environmental monitoring and wireless communication for underground mine safety applications.
 
 ---
-
 # 9. Bill of Materials
 
 ## 9.1 Full BOM
@@ -480,8 +479,32 @@ Vivado was used for hardware synthesis and bitstream generation while Vitis was 
 
 ## Hardware Setup
 
-**Response:**  
-`Not applicable currently. Hardware setup images, FPGA implementation screenshots, testing setup, and final prototype photographs will be uploaded after complete system assembly.`
+The following image shows the complete hardware implementation of the FPGA-based smart safety helmet monitoring system including the Boolean FPGA board, MQ2 gas sensor, DHT11 sensor, Bluetooth module, and display interfacing connections.
+
+<p align="center">
+  <img src="./images/hardware%20setup.jpeg" width="650">
+</p>
+
+### Hardware Demonstration
+
+- Boolean FPGA Board used as the main processing unit
+- MQ2 gas sensor connected for hazardous gas detection
+- DHT11 sensor interfaced for temperature and humidity monitoring
+- HC-05 Bluetooth module connected for UART wireless communication
+- LEDs and 7-segment displays used for visual indication and monitoring
+
+The hardware setup demonstrates successful integration of FPGA hardware, sensors, communication modules, and display peripherals for real-time industrial safety monitoring applications.
+
+---
+### Hardware Demonstration
+
+- Boolean FPGA Board used as the main processing unit
+- MQ2 gas sensor connected for hazardous gas detection
+- DHT11 sensor interfaced for temperature and humidity monitoring
+- HC-05 Bluetooth module connected for UART wireless communication
+- LEDs and 7-segment displays used for visual indication and monitoring
+
+The hardware setup demonstrates successful integration of FPGA hardware, sensors, communication modules, and display peripherals for real-time industrial safety monitoring applications.
 
 ---
 
