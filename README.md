@@ -179,8 +179,27 @@ The system functions as a real-time industrial safety monitoring device for unde
 
 ## 6.2 Labeled Build Sketch/architecture/flow diagram/algorithm
 
-**Response:**  
-`Not applicable currently. Detailed labeled hardware architecture and system flow diagrams will be included after final implementation and testing.`
+The following diagrams represent the hardware architecture and operational flow of the FPGA-based smart safety helmet monitoring system.
+
+### Hardware Architecture
+
+<p align="center">
+  <img src="./images/block%20design%20for%20boolean%20board.jpeg" width="750">
+</p>
+
+### System Flowchart
+
+<p align="center">
+  <img src="./images/flowchart.png" width="750">
+</p>
+
+### Description
+
+- The hardware architecture is implemented using a MicroBlaze-based embedded FPGA design on the Boolean FPGA Board.
+- AXI GPIO peripherals interface the MQ6 gas sensor, DHT11 sensor, LEDs, and 7-segment displays.
+- AXI UARTLite modules are used for Bluetooth-based UART communication through the HC-05 module.
+- The operational flowchart illustrates initialization, environmental monitoring, hazard detection, display updating, and wireless data transmission.
+- The system continuously monitors hazardous gas levels, temperature, and humidity conditions in real time for underground mine worker safety applications.
 
 ---
 
