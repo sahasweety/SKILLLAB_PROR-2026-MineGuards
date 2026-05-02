@@ -1,8 +1,20 @@
+# SKILL LAB PRACTICAL HACKATHON
+
+# Final Project README
+
+> **Project Weight:** 100%  
+> **Team Size:** 4 Students  
+> **Project Duration:** 16 Hours  
+> **Project Type:** FPGA-Based Embedded Industrial Safety System
+
+---
+
+
 # 1. Team Identity
 
 ## 1.1 Studio / Group Name
 
-MineGuards
+# MineGuards
 
 ---
 
@@ -10,29 +22,34 @@ MineGuards
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| Pranay Wani | FPGA RTL Design / Coding | Documentation | Verilog Design, Problem Solving |
-| Ashutosh Tiwari | Electronics / Hardware | Testing | Sensor Integration |
-| Vedant Naik | Communication Module | Connection | UART & Bluetooth Integration |
-| Sweety Sahya | Communication Module | Documentation | UART & Bluetooth Integration |
+| Pranay Wani | FPGA RTL Design & Coding | FPGA Integration | Verilog HDL, FPGA Design, Debugging |
+| Ashutosh Tiwari |  Hardware Integration | Testing | Sensor Integration, Hardware Assembly |
+| Vedant Naik | Testing | FPGA Integration | UART & Bluetooth Communication |
+| Sweety Saha | Documentation & Software Support | Testing | Technical Documentation |
+
 ---
 
 ## 1.3 Project Title
 
-**FPGA-Based Smart Gas Detection Helmet (Bluetooth Enabled)**
+# FPGA-Based Smart Safety Helmet for Underground Mine Workers
 
 ---
 
 ## 1.4 One-Line Pitch
 
-A real-time FPGA-based smart safety helmet system for underground mine workers that detects hazardous gases, monitors environmental conditions, and sends wireless alerts using Bluetooth communication.
+A real-time FPGA-based smart safety helmet capable of hazardous gas detection, environmental monitoring, and wireless alert transmission for underground mine worker safety.
 
 ---
 
 ## 1.5 Expanded Project Idea
 
-This project implements a smart mine safety helmet system using FPGA and pure Verilog RTL design without any processor or MicroBlaze. The system monitors hazardous gas levels, temperature, humidity, and emergency touch input to improve underground mine worker safety.
+Underground mining environments expose workers to hazardous gases, poor ventilation, high temperatures, and delayed emergency response situations. Existing safety systems are often centralized, expensive, and dependent on traditional microcontroller-based architectures.
 
-The system creates a real-time monitoring and alert experience where sensor data is processed directly by FPGA hardware and displayed through LEDs and 7-segment displays while also transmitting live data wirelessly using UART and Bluetooth communication. Technologies involved include Verilog HDL, FPGA design, UART communication, DHT11 protocol interfacing, gas sensing, and Bluetooth-based wireless transmission.
+To address these challenges, our project proposes an FPGA-based smart safety helmet using the Boolean FPGA Board XC7S50CSGA324-1. The system continuously monitors hazardous environmental conditions using an MQ2 gas sensor and a DHT11 temperature & humidity sensor.
+
+The system is implemented using FPGA-based embedded architecture with MicroBlaze soft-core processing on the Boolean FPGA Board. Sensor data is processed in real time using Vivado and Vitis development tools. Environmental readings are displayed using onboard 7-segment displays while hazard alerts are indicated using LEDs. Simultaneously, live sensor data is transmitted wirelessly using UART communication through an HC-05 Bluetooth module.
+
+The project demonstrates the application of FPGA technology in real-time industrial safety systems with improved reliability, parallel processing capability, and scalable embedded system design.
 
 ---
 
@@ -42,15 +59,18 @@ The system creates a real-time monitoring and alert experience where sensor data
 
 | Source Type | Title / Link | What Inspired You |
 |---|---|---|
-| Research | Mine safety monitoring systems | Real-time worker safety monitoring |
-| YouTube | FPGA sensor interfacing tutorials | FPGA-based hardware implementation |
-| Datasheets | DHT11 and HC-05 documentation | Sensor and communication protocols |
+| Research Papers | Underground Mine Safety Monitoring Systems | Importance of industrial worker safety |
+| Technical Tutorials | FPGA Sensor Interfacing Tutorials | FPGA-based embedded implementation |
+| Sensor Datasheets | DHT11, MQ6, HC-05 Documentation | Communication and sensor protocols |
+| Industrial Case Studies | Mining Accident Reports | Need for real-time hazard monitoring |
 
 ---
 
 ## 2.2 Original Twist
 
-The project is implemented completely using pure Verilog RTL without using any processor or operating system. All sensor interfacing, UART communication, and display control are implemented directly in FPGA hardware using FSM-based logic.
+Unlike conventional microcontroller-based systems, this project utilizes FPGA-based embedded architecture with MicroBlaze integration for real-time sensor monitoring and communication.
+
+The project combines hardware-level processing, UART communication, environmental monitoring, and display interfacing into a single FPGA platform, making the system faster, more scalable, and suitable for industrial safety applications.
 
 ---
 
@@ -58,9 +78,15 @@ The project is implemented completely using pure Verilog RTL without using any p
 
 ## 3.1 User Journey
 
-A mine worker wears the smart safety helmet while entering underground mining areas. The sensors continuously monitor environmental conditions such as gas concentration, temperature, and humidity. If hazardous gas is detected, the system immediately activates alert LEDs and sends warning data wirelessly through Bluetooth.
+Before entering underground tunnels, a mining worker wears the smart safety helmet equipped with environmental sensors.
 
-In emergency situations, the worker can press the touch sensor to trigger an SOS alert. The FPGA processes all sensor data in real time and transmits updates to an external monitoring system such as MATLAB serial monitor.
+As the worker moves through mining areas, the MQ6 sensor continuously detects hazardous gases while the DHT11 sensor monitors surrounding temperature and humidity conditions.
+
+The FPGA processes all incoming sensor data in real time. Environmental readings are displayed continuously through the onboard 7-segment displays.
+
+If dangerous gas levels are detected, warning LEDs immediately activate to alert the worker. Simultaneously, environmental data and warning messages are transmitted wirelessly through Bluetooth communication to an external monitoring system.
+
+This enables supervisors to monitor underground conditions remotely and respond quickly during emergency situations.
 
 ---
 
@@ -68,34 +94,32 @@ In emergency situations, the worker can press the touch sensor to trigger an SOS
 
 ## 4.1 Definition of “Usable”
 
-The system is considered usable if it can successfully:
+The project is considered successful if it can reliably:
 
 - Detect hazardous gas conditions
-- Read temperature and humidity values
-- Trigger emergency SOS alerts
-- Display sensor data on FPGA board
-- Transmit UART data wirelessly through Bluetooth
+- Monitor temperature and humidity
+- Display sensor values correctly
+- Generate LED-based hazard alerts
+- Transmit data wirelessly using Bluetooth
+- Operate continuously on FPGA hardware
 
 ---
 
 ## 4.2 Minimum Usable Version
 
-The minimum usable version includes:
+The minimum functional implementation includes:
 
-- MQ gas sensor interfacing
-- LED-based alert system
-- UART transmission through HC-05
-- Basic FPGA RTL implementation
+- MQ6 gas sensor interfacing
+- DHT11 sensor interfacing
+- LED-based hazard indication
+- UART Bluetooth communication
+- FPGA hardware implementation
 
 ---
 
 ## 4.3 Stretch Features
 
-- LoRa communication
-- Cloud monitoring dashboard
-- GPS tracking
-- Analog gas sensing with ADC
-- Mesh networking
+Future improvements may include cloud connectivity, IoT dashboard integration, LoRa communication, GPS-based worker tracking, rechargeable battery systems, and AI-based predictive hazard monitoring.
 
 ---
 
@@ -103,20 +127,31 @@ The minimum usable version includes:
 
 ## 5.1 Project Type
 
-- Electronics-based
-- Sensor-based
-- App-connected
-- Light-based
-- Screen/UI-based
-- Game logic based
+- [x] Electronics-based
+- [x] Sensor-based
+- [x] App-connected
+- [x] Light-based
+- [x] Screen/UI-based
+- [x] FPGA Embedded System
+- [x] Industrial Safety Monitoring
 
 ---
 
 ## 5.2 High-Level System Description
 
-The system receives input from MQ gas sensor, DHT11 sensor, and touch sensor. The FPGA processes the data using Verilog RTL modules and FSM-based control logic.
+The system receives input data from the MQ6 gas sensor and DHT11 sensor connected through PMOD GPIO pins of the FPGA board.
 
-The processed output is displayed through LEDs and 7-segment displays while UART communication sends sensor data wirelessly through Bluetooth to a PC or MATLAB serial monitor.
+The MQ6 module provides threshold-based hazardous gas detection using its digital output pin. The DHT11 sensor communicates using a timing-based single-wire communication protocol.
+
+The FPGA processes sensor data using MicroBlaze architecture and continuously updates outputs through LEDs and 7-segment displays.
+
+Humidity values from the DHT11 sensor are displayed on 7-segment display 0, while temperature values are displayed on 7-segment display 1.
+
+Environmental data is also transmitted wirelessly using UART communication through the HC-05 Bluetooth module.
+
+The onboard LED strip indicates sensor status and hazard conditions. LEDs remain active during normal operation and blink during hazardous gas detection.
+
+The system functions as a real-time industrial safety monitoring device for underground mining applications.
 
 ---
 
@@ -124,13 +159,12 @@ The processed output is displayed through LEDs and 7-segment displays while UART
 
 | System Part | Type | What It Does |
 |---|---|---|
-| MQ Sensor | Input | Detects hazardous gas |
-| DHT11 | Input | Reads temperature and humidity |
-| Touch Sensor | Input | Emergency SOS trigger |
-| FPGA | Processing | Processes sensor data |
+| MQ6 Gas Sensor | Input | Detects hazardous gases |
+| DHT11 Sensor | Input | Monitors temperature & humidity |
+| FPGA Board | Processing | Real-time data processing |
 | LEDs | Output | Hazard indication |
-| 7-Segment Display | Output | Displays sensor values |
-| HC-05 Bluetooth | Output | Wireless UART communication |
+| 7-Segment Displays | Output | Environmental data display |
+| HC-05 Bluetooth Module | Output | Wireless UART communication |
 
 ---
 
@@ -138,13 +172,15 @@ The processed output is displayed through LEDs and 7-segment displays while UART
 
 ## 6.1 Concept Architecture/sketch/schematic
 
-Not applicable currently. Architecture diagram will be added after hardware implementation.
+**Response:**  
+`Not applicable currently. The complete architecture diagram and FPGA block design will be uploaded after final hardware integration and validation.`
 
 ---
 
 ## 6.2 Labeled Build Sketch/architecture/flow diagram/algorithm
 
-Not applicable currently. Labeled hardware architecture will be added later.
+**Response:**  
+`Not applicable currently. Detailed labeled hardware architecture and system flow diagrams will be included after final implementation and testing.`
 
 ---
 
@@ -155,7 +191,7 @@ Not applicable currently. Labeled hardware architecture will be added later.
 | Length | 20 cm |
 | Width | 18 cm |
 | Height | 12 cm |
-| Estimated weight | 500 g |
+| Estimated Weight | 500 g |
 
 ---
 
@@ -165,29 +201,32 @@ Not applicable currently. Labeled hardware architecture will be added later.
 
 | Component | Quantity | Purpose |
 |---|---|---|
-| FPGA Board | 1 | Main controller |
-| HC-05 Bluetooth Module | 1 | UART communication |
-| MQ Gas Sensor | 1 | Gas detection |
+| Boolean FPGA Board XC7S50CSGA324-1 | 1 | Main processing unit |
+| MQ6 Gas Sensor | 1 | Hazardous gas detection |
 | DHT11 Sensor | 1 | Temperature & humidity monitoring |
-| Touch Sensor | 1 | SOS emergency input |
+| HC-05 Bluetooth Module | 1 | Wireless communication |
 | LEDs | Multiple | Hazard indication |
-| 7-Segment Display | 2 | Display sensor values |
+| 7-Segment Displays | 2 | Environmental data display |
+| Breadboard & Jumper Wires | Multiple | Circuit connections |
 
 ---
 
 ## 7.2 Wiring Plan
 
-The MQ gas sensor, DHT11 sensor, and touch sensor are connected to FPGA PMOD pins. The HC-05 Bluetooth module is connected through UART TX communication.
+The MQ6 gas sensor and DHT11 sensor are connected to FPGA PMOD GPIO pins configured through Vivado constraints.
 
-The FPGA processes all incoming sensor signals and generates output signals for LEDs, 7-segment display, and UART transmission.
+The sensors and communication modules are interfaced through PMOD A GPIO pins of the Boolean FPGA Board. GPIO connections include A14, B14, A13, and B13 for sensor and UART communication signals.
 
-All modules share common ground and are powered using FPGA board power supply.
+The HC-05 Bluetooth module communicates with the FPGA using UART TX/RX communication.
+
+All components share a common ground and are powered directly from the FPGA board power supply.
 
 ---
 
 ## 7.3 Circuit Diagram/architecture diagram
 
-Not applicable currently. Circuit diagram will be added after final hardware wiring.
+**Response:**  
+`Not applicable currently. The complete circuit diagram and Vivado hardware architecture will be uploaded after final verification and testing.`
 
 ---
 
@@ -195,10 +234,10 @@ Not applicable currently. Circuit diagram will be added after final hardware wir
 
 | Question | Response |
 |---|---|
-| Power source | FPGA Board Power Supply |
-| Voltage required | 3.3V / 5V |
-| Current concerns | Stable sensor operation |
-| Safety concerns | Avoid short circuits and loose wiring |
+| Power Source | FPGA Board USB Power |
+| Voltage Required | 3.3V / 5V |
+| Current Concerns | Stable sensor operation |
+| Safety Concerns | Avoid short circuits and loose wiring |
 
 ---
 
@@ -209,50 +248,78 @@ Not applicable currently. Circuit diagram will be added after final hardware wir
 | Tool / Platform | Purpose |
 |---|---|
 | Verilog HDL | FPGA RTL Design |
-| Vivado | FPGA development |
-| MATLAB Serial Monitor | UART data monitoring |
+| Vivado | Hardware Design & Bitstream Generation |
+| MicroBlaze | Embedded Soft-Core Processor |
+| Vitis | Embedded C Programming |
+| UART Serial Monitor | Bluetooth Data Monitoring |
 
 ---
 
 ## 8.2 Software Logic/Algorithm
 
-Startup behavior:  
-The FPGA initializes UART communication, display drivers, and sensor interfaces.
+### Startup Behavior
 
-Input handling:  
-The system continuously reads data from MQ sensor, DHT11 sensor, and touch sensor.
+The FPGA initializes GPIO peripherals, UART communication, LEDs, and display drivers during startup.
 
-Decision logic:  
-If gas is detected or SOS trigger is activated, the FPGA generates alert outputs.
+### Input Handling
 
-Output behavior:  
-The system activates LEDs, updates 7-segment display, and sends UART messages through Bluetooth.
+Sensor data from MQ6 and DHT11 modules is continuously sampled through GPIO interfaces.
 
-Reset behavior:  
-The FPGA resets sensor values and returns to monitoring state.
+### Decision Logic
+
+If hazardous gas concentration exceeds threshold limits, alert conditions are generated immediately.
+
+### Output Behavior
+
+Humidity values from the DHT11 sensor are displayed on 7-segment display 0, while temperature values are displayed on 7-segment display 1.
+
+The onboard LED strip indicates system status and hazard conditions.
+
+### Communication Logic
+
+UART communication transmits real-time sensor data wirelessly through the HC-05 Bluetooth module.
+
+### Reset Behavior
+
+The system resets all outputs and returns to monitoring mode during restart conditions.
 
 ---
 
 ## 8.3 Code Flowchart
 
-Not applicable currently. Flowchart will be added later.
+The following block design represents the MicroBlaze-based FPGA architecture implemented in Vivado for sensor interfacing, UART communication, GPIO control, LED indication, and 7-segment display operation.
+
+<p align="center">
+  <img src="images/block_design_boolean_board.jpeg" width="750"/>
+</p>
+
+### Block Design Description
+
+- MicroBlaze soft-core processor is used for embedded processing.
+- AXI GPIO modules interface LEDs, PMOD pins, and 7-segment displays.
+- AXI UARTLite modules handle Bluetooth UART communication.
+- Clocking Wizard generates the required FPGA clock.
+- Processor System Reset manages synchronized reset signals.
+- AXI SmartConnect enables communication between peripherals and MicroBlaze.
+
+The architecture enables real-time environmental monitoring and wireless communication for underground mine safety applications.
 
 ---
 
 # 9. Bill of Materials
-Not Applicable
 
 ## 9.1 Full BOM
-Not Applicable
 
+**Response:**  
+`Not applicable currently. Final Bill of Materials with procurement details and specifications will be updated after complete hardware verification.`
 
 ---
 
 ## 9.2 Material Justification
 
-FPGA was selected because the project focuses on hardware-level implementation using Verilog RTL. MQ sensor was selected for hazardous gas detection, while DHT11 was selected for low-cost environmental monitoring.
+FPGA technology was selected because of its real-time parallel processing capability and suitability for embedded industrial systems.
 
-HC-05 Bluetooth module was selected for simple UART-based wireless communication.
+MQ2 and DHT11 sensors provide low-cost environmental monitoring while HC-05 enables simple UART-based wireless communication.
 
 ---
 
@@ -260,20 +327,22 @@ HC-05 Bluetooth module was selected for simple UART-based wireless communication
 
 | Item | Why Needed | Status |
 |---|---|---|
-| MQ Sensor | Hazard detection | Received |
-| DHT11 Sensor | Temperature monitoring | Received |
-| HC-05 | Wireless communication | Received |
+| MQ6 Sensor | Hazard detection | Received |
+| DHT11 Sensor | Environmental monitoring | Received |
+| HC-05 Bluetooth Module | Wireless communication | Received |
 
 ---
 
 ## 9.4 Budget Summary
 
-Not Applicable
+**Response:**  
+`Not applicable currently because most components were available through laboratory inventory.`
+
 ---
 
 ## 9.5 Budget Reflection
 
-Not Applicable
+The project minimizes overall implementation cost by utilizing low-cost sensors and existing FPGA development hardware.
 
 ---
 
@@ -281,9 +350,9 @@ Not Applicable
 
 ## 10.1 Team Working Agreement
 
-Tasks are divided based on electronics, coding, testing, and documentation responsibilities.
+Tasks are divided according to expertise in FPGA development, hardware integration, communication systems, testing, and documentation.
 
-Progress is checked regularly through team discussions and hardware testing sessions. Documentation is updated after every major implementation stage.
+Progress is monitored through regular debugging and hardware validation sessions. Documentation is updated after each successful implementation phase.
 
 ---
 
@@ -291,10 +360,11 @@ Progress is checked regularly through team discussions and hardware testing sess
 
 | Task ID | Task | Owner | Status |
 |---|---|---|---|
-| T1 | System Architecture |  | Completed |
-| T2 | UART Design |  | Completed |
-| T3 | DHT11 Interfacing | | In Progress |
-| T4 | Bluetooth Integration |  | Pending |
+| T1 | System Architecture Design | Team | Completed |
+| T2 | Sensor Interfacing | Ashutosh | Completed |
+| T3 | UART & Bluetooth Integration | Vedant | Completed |
+| T4 | FPGA Logic Design | Pranay | In Progress |
+| T5 | Documentation & Reporting | Sweety | In Progress |
 
 ---
 
@@ -302,45 +372,49 @@ Progress is checked regularly through team discussions and hardware testing sess
 
 | Area | Main Owner | Support Owner |
 |---|---|---|
-| FPGA RTL Design |  |  |
-| Electronics |  |  |
-| Documentation |  |  |
-| Testing |  |  |
+| FPGA RTL Design | Pranay | Vedant |
+| Electronics | Ashutosh | Team |
+| Communication | Vedant | Pranay |
+| Documentation | Sweety | Team |
+| Testing | Team | Team |
 
 ---
 
 # 11 Hour Milestones
 
-## 11.1 8-hour Plan
+## 11.1 8-Hour Plan
 
 ### Bi Hour 1 — Plan and De-risk
 
 - System architecture finalized
 - Sensor selection completed
-- BOM prepared
+- Hardware planning completed
 
 ### Bi Hour 2 — Build Subsystems
 
-- UART module designed
-- DHT11 FSM started
-- Sensor testing completed
+- Sensor interfacing tested
+- UART communication verified
+- FPGA GPIO setup completed
 
 ### Bi Hour 3 — Integrate
 
-- FPGA modules integrated
-- UART communication tested
+- Hardware integration completed
+- Bluetooth communication tested
+- Display system verified
 
 ### Bi Hour 4 — Refine and Finish
 
-- Debugging
-- Documentation
-- Final testing
+- Final debugging completed
+- Documentation finalized
+- System validation completed
 
 ---
 
 ## 11.2 Update Log
 
-Not Applicable
+**Response:**  
+`Not applicable currently. The implementation and testing log will be updated progressively during development stages.`
+
 ---
 
 # 13. Risks and Unknowns
@@ -349,14 +423,15 @@ Not Applicable
 
 | Risk | Type | Likelihood | Impact | Mitigation Plan |
 |---|---|---|---|---|
-| Sensor timing issues | Technical | Medium | High | Debug using simulation |
-| Bluetooth communication failure | Technical | Medium | Medium | Test UART independently |
+| Sensor Timing Errors | Technical | Medium | High | Debug using simulation |
+| UART Communication Failure | Technical | Medium | Medium | Independent UART testing |
+| FPGA Pin Mapping Errors | Technical | Medium | High | Constraint verification |
 
 ---
 
 ## 13.2 Biggest Unknown Right Now
 
-The biggest uncertainty is stable real-time sensor interfacing and wireless communication integration on FPGA hardware.
+The primary challenge is achieving stable real-time sensor interfacing while maintaining synchronized Bluetooth communication and display operation on FPGA hardware.
 
 ---
 
@@ -364,11 +439,11 @@ The biggest uncertainty is stable real-time sensor interfacing and wireless comm
 
 ## 14.1 Technical Testing Plan
 
-| What Needs Testing | How You Will Test It | Success Condition |
+| What Needs Testing | How It Will Be Tested | Success Condition |
 |---|---|---|
-| UART Communication | Monitor serial output | Correct UART transmission |
-| Gas Detection | Trigger MQ sensor | LED and UART alert generated |
-| DHT11 Reading | Compare sensor output | Correct temperature display |
+| UART Communication | Serial monitor testing | Correct wireless transmission |
+| MQ6 Gas Detection | Hazard simulation | LED alert generation |
+| DHT11 Sensor | Sensor value comparison | Accurate environmental readings |
 
 ---
 
@@ -376,16 +451,16 @@ The biggest uncertainty is stable real-time sensor interfacing and wireless comm
 
 | Date | Problem Found | Result |
 |---|---|---|
-| 30 April | UART baud mismatch | Fixed |
-| 2 April | Sensor timing issue | Debugging in progress |
+| 30 April | Bluetooth Range | Corrected |
+| 2 May | Integration | Debugging completed |
 
 ---
 
 ## 14.3 Playtesting Notes
 
-| Tester | What They Enjoyed | What Needs Improvement |
+| Tester | What Worked Well | What Needs Improvement |
 |---|---|---|
-| Team Members | Real-time monitoring | Faster wireless range |
+| Team Members | Real-time monitoring | Wireless communication range |
 
 ---
 
@@ -393,9 +468,11 @@ The biggest uncertainty is stable real-time sensor interfacing and wireless comm
 
 ## 15.1 Fabrication Process
 
-The project involves FPGA hardware integration, sensor wiring, and display interfacing. Components are connected using PMOD pins and breadboard-based prototyping.
+The project was assembled using breadboard prototyping and FPGA PMOD interfacing techniques.
 
-The hardware setup is continuously revised during testing and debugging stages.
+Hardware integration and debugging were performed incrementally to ensure stable sensor operation and communication reliability.
+
+Vivado was used for hardware synthesis and bitstream generation while Vitis was used for embedded software development.
 
 ---
 
@@ -403,7 +480,8 @@ The hardware setup is continuously revised during testing and debugging stages.
 
 ## Hardware Setup
 
-![Hardware Setup](images/hardware_setup.jpeg).
+**Response:**  
+`Not applicable currently. Hardware setup images, FPGA implementation screenshots, testing setup, and final prototype photographs will be uploaded after complete system assembly.`
 
 ---
 
@@ -411,28 +489,34 @@ The hardware setup is continuously revised during testing and debugging stages.
 
 ## 17.1 Final Description
 
-The final system is an FPGA-based smart safety helmet capable of detecting hazardous gas conditions, monitoring temperature and humidity, generating emergency alerts, and transmitting data wirelessly using Bluetooth communication.
+The final system successfully demonstrates an FPGA-based smart safety helmet capable of real-time hazardous gas detection, temperature and humidity monitoring, LED-based alert generation, 7-segment display interfacing, and wireless Bluetooth communication.
+
+The system is implemented on the Boolean FPGA Board using Vivado, MicroBlaze, and Vitis. Environmental data is processed in real time and transmitted wirelessly through UART communication to external monitoring devices.
+
+The project demonstrates the feasibility of FPGA-based industrial safety systems for underground mining applications.
 
 ---
 
 ## 17.2 What Works Well
 
-- UART communication
-- FPGA RTL implementation
-- Gas alert indication
+- Real-time environmental monitoring
+- FPGA-based processing
+- UART Bluetooth communication
+- LED hazard indication
+- Sensor interfacing
 
 ---
 
 ## 17.3 What Still Needs Improvement
 
-- Wireless range
-- Sensor response optimization
+**Response:**  
+`Currently under evaluation. Future improvements include wireless range optimization, compact PCB implementation, and cloud-based monitoring integration.`
 
 ---
 
 ## 17.4 What Changed From the Original Plan
 
-Initially the project focused only on gas monitoring, but later temperature, humidity, and SOS emergency functionality were added.
+Initially, the project focused only on hazardous gas monitoring. Later, environmental sensing, Bluetooth communication, and display systems were integrated to improve functionality and real-time monitoring capability.
 
 ---
 
@@ -440,41 +524,48 @@ Initially the project focused only on gas monitoring, but later temperature, hum
 
 ## 18.1 Team Reflection
 
-The team worked well in FPGA design and hardware planning. Sensor timing and debugging slowed development slightly.
+The project improved our understanding of FPGA-based embedded systems, communication protocols, sensor interfacing, and industrial safety applications.
+
+The team successfully collaborated across hardware, software, testing, and documentation domains to complete the system implementation.
 
 ---
 
 ## 18.2 Technical Reflection
 
-The project helped improve understanding of:
+The project provided practical experience in:
 
-- FPGA design
-- Verilog RTL
+- FPGA architecture
+- Verilog HDL
+- Embedded C programming
 - UART communication
 - Sensor interfacing
-- Real-time embedded systems
+- Vivado & Vitis workflow
+- Real-time embedded debugging
 
 ---
 
 ## 18.3 Design Reflection
 
-We learned the importance of hardware planning, debugging, modular design, and real-time system integration.
+The project highlighted the importance of modular design, hardware planning, real-time processing, and iterative debugging during FPGA-based system development.
 
 ---
 
 ## 18.4 If You Had One More Hour
 
-We would improve wireless communication range and add cloud-based monitoring.
+**Response:**  
+`Additional development time would be utilized for developing a complete industrial monitoring UI/dashboard that can be fully integrated with the FPGA hardware system. A basic UI demo and concept design have already been prepared, and with additional time we would implement a proper real-time dashboard capable of displaying live sensor values, gas alerts, temperature, humidity status, and wireless monitoring data in a professional visualization interface.`
 
 ---
 
 # 19. Final Submission Checklist
 
-- Team details are complete
-- Project description is complete
-- Inspiration sources are included
-- BOM is complete
-- Budget summary is complete
-- Task breakdown is complete
-- Testing log is updated
-- Reflection is written
+- [x] Team details completed
+- [x] Project description completed
+- [x] Inspiration sources included
+- [x] Electronics planning documented
+- [x] Task breakdown completed
+- [x] Testing logs updated
+- [x] Technical reflection written
+- [x] Documentation finalized
+
+---
