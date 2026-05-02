@@ -190,7 +190,7 @@ The following diagrams represent the hardware architecture and operational flow 
 ### System Flowchart
 
 <p align="center">
-  <img src="./images/flowchart.png" width="750">
+  <img src="./images/flow%20daigram.png" width="750">
 </p>
 
 ### Description
