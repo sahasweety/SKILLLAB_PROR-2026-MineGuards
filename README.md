@@ -172,10 +172,9 @@ The system functions as a real-time industrial safety monitoring device for unde
 
 ## 6.1 Concept Architecture/sketch/schematic
 
-**Response:**  
-`Not applicable currently. The complete architecture diagram and FPGA block design will be uploaded after final hardware integration and validation.`
-
----
+<p align="center">
+  <img src="./images/Architecture.jpg" width="750">
+</p>
 
 ## 6.2 Labeled Build Sketch/architecture/flow diagram/algorithm
 
